@@ -1,0 +1,7 @@
+%div{:id=>@id, :class=>['admonitionblock', (attr :name), role]}
+  .content
+    - if title?
+      %strong.title=title
+    - else
+      %strong.title.title--type=(attr :name).capitalize
+    =content
